@@ -1,0 +1,21 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+      Arrays.sort(nums);
+        for(int i=0;i<nums.length-1;i++)
+        {
+            if(nums[i]==nums[i+1])return true;
+        }
+        return false;
+      
+    }
+}
+
+// Arrays used here uses sorting function which is i think using merge sort to sort the 
+// elements , after sorting the elements we are checking the current element with the next
+// element if both are equal than it is duplicate and we will return true and if it is not
+// then we will increment till we find the other duplicate element else return false.
+
+
+
+// If you prioritize space then you can use the sorting method but if priortize time then 
+// you should use the HashSet.

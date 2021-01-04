@@ -1,0 +1,24 @@
+class Solution
+{
+public int[] twoSum(int [] nums, int target )
+{
+int n = nums.length;
+        
+        for(int i=0;i<n;i++)
+        {
+            
+            for (int j=i+1;j<n;j++)
+            {
+                int compliment = target - nums[i];
+                
+                if (nums[j]== compliment)
+                {
+                    return new int[]{i,j};
+                }
+            }
+        }// closing for loop
+        
+        throw new IllegalArgumentException("No Match found.");
+        
+}
+} 

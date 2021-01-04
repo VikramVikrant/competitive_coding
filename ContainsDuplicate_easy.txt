@@ -1,0 +1,17 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        
+        Set<Integer> data = new HashSet<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            data.add(nums[i]);
+        }
+        if(nums.length == data.size())
+            return false;
+        return true;
+    }
+}
+
+/* HashSet only keeps uniques element so at last when we compare size of nums array to 
+  the size of data , if it contains duplicate then it's size will be less than num array,
+  this is main concept for solving this question. */
