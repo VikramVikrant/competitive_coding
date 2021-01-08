@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int num;int rev=0;
+        num=x; //storing x in variable num
+        int digit;
+        while(num!=0)
+        {
+            digit = num%10;
+            rev = rev*10 + digit;
+            num = num/10;
+        }
+        
+        if(x==rev && x>=0)//if x is -ve than it's not a palindrome
+            return true;
+        return false;
+    }
+}
+
+// This is the most general method to check whether a number is a palindrome or not
+

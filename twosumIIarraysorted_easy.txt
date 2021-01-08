@@ -1,0 +1,19 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        
+        for(int i=0;i<numbers.length;i++)
+        {
+            for(int j=i+1;j<numbers.length;j++)
+            {
+                int compliment = target - numbers[i];
+                if(numbers[j] == compliment)
+                    return new int[]{i+1,j+1};
+            }
+            
+        }  
+        throw new IllegalArgumentException("no match found.");
+}
+}
+
+// In the following problem the array we have taken was sorted and indexes which we have to 
+// print was 1 more than the normal indices so we have return i+1 and j+1 instead of i and j.
